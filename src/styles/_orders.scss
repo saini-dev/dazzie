@@ -1,0 +1,174 @@
+.order-content{
+    background-color: #f7f7fc;
+    padding: 3% 1%;
+    overflow-y: auto;
+    .stats-container{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+        .stats{
+            border-radius: 10px;
+            padding: 0.2% 1.5%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 18vw;
+            #red{
+                svg{
+                    fill: red;
+                }
+                h4{
+                    color: red;
+                }
+            }
+            .stats-info{
+                margin-top: 21px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                place-items: flex-end;
+                svg{
+                    fill: #42bda1;
+                }
+                h4{
+                    color: #42bda1;
+                }
+            }
+        }
+    }
+    .body-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 1.5% 0px 1.5%;
+        .orders{
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 52vw;
+            padding: 1% 2%;
+            table{
+                width: 100%;
+                text-align: left;
+                border-collapse: collapse;
+                color: lighten($color: #000000, $amount: 30%);
+                font-size: 1rem;
+                th{
+                    background-color: #f7f7fc;
+                    padding: 3% 0px 3% 2%;
+                    text-align: left;
+                }
+                td{
+                    padding: 3% 0px 2.5% 2%;
+                    font-weight: 500;
+                }
+            }
+        }
+        .items-sold{
+           border-radius: 10px;
+           background-color: #ffffff;
+           width: 26vw;
+           padding: 1% 1.5%;
+           .item-title{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e2ea;
+            button{
+                background-color: #ffffff;
+                border: 2px solid #5541d7;
+                border-radius: 8px;
+                color: #5541d7;
+                font-weight: 600;
+                font-size: 0.9rem;
+                padding: 2% 12% 2% 5%;
+                cursor: pointer;
+            }
+            svg{
+                position: absolute;
+                right: 4%;
+                fill: #5541d7;
+                transform: scale(1.5);
+                cursor: pointer;
+            }
+           }
+           .items{
+                margin-top: 5%;
+                display: flex;
+                align-items: center;
+                text-align: right;
+                div{
+                    flex: 0.19;
+                    width: 1vw;
+                    height: 60px;
+                    border-radius: 8px;
+                    background-color: #e2e2ea;
+                }
+                h4{
+                    flex: 0.5;
+                    text-align: left;
+                    padding-left: 5%;
+                }
+                p{
+                    flex: 0.31;
+                    width: max-content;
+                    color: #92929d;
+                    font-weight: 700;
+                }
+           }
+       } 
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .order-content{
+        font-size: 0.8rem;
+        .stats-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            align-items: center;
+            place-items: center;
+            .stats{
+                width: 29vw;
+                padding: 0px 20px;
+                margin-bottom: 10px;
+                .stats-info{
+                    margin-top: 14px;
+                    h4{
+                        width: max-content;
+                    }
+                }
+            }
+        }
+        .body-container{
+            flex-direction: column;
+            gap: 20px;
+            .orders{
+                width: 77vw;
+                table{
+                    font-size: 0.8rem;
+                    tr{
+                        display: flex;
+                    }
+                    th{
+                        flex: 1;
+                    }
+                    td{
+                        flex: 1;
+                    }
+                }
+            }
+            .items-sold{
+                width: 75.5vw;
+                padding: 5px 10px;
+                .items{
+                    div{
+                        flex: 0.17;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

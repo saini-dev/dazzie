@@ -1,0 +1,24 @@
+@import "./navbar";
+@import "./sidebar";
+@import "./products";
+@import "./orders";
+
+.wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.12fr 0.88fr;
+}
+.main{
+    display: grid;
+    grid-template-columns: 0.08fr 0.92fr;
+    overflow-y: hidden;
+}
+
+@media only screen and (max-width: 425px) {
+    .wrapper{
+        grid-template-rows: 0.1fr 0.9fr ;
+    }
+    .main{
+        grid-template-columns: 0.14fr 0.86fr;
+    }
+}
